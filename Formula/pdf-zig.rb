@@ -13,7 +13,7 @@
 class PdfZig < Formula
   desc "PDF -> Markdown extraction CLI, NDJSON-streaming, optimized for LLM consumers"
   homepage "https://github.com/laurentfabre/pdf.zig"
-  version "1.0.1"
+  version "2.2.0"
   license "CC0-1.0"
 
   base_url = "https://github.com/laurentfabre/pdf.zig/releases/download/v#{version}"
@@ -21,22 +21,22 @@ class PdfZig < Formula
   on_macos do
     on_arm do
       url "#{base_url}/pdf.zig-v#{version}-aarch64-macos.tar.gz"
-      sha256 "91b552b74158f1a8d22fe9d43275363e8cabbf181351ac2a10944ea8fed220d9"
+      sha256 "bf82281761fb7a544d31214755e3978fc3ce0f1bbad278410383fb216df8e19f"
     end
     on_intel do
       url "#{base_url}/pdf.zig-v#{version}-x86_64-macos.tar.gz"
-      sha256 "7a5bf4cba7bec77b552cd6a939950d9577896aee45de1f4e9e2a0668fec2a3f3"
+      sha256 "4b3573eb2d5f6627d3abac35b51d45fb41a38610df44768528868b46f660a5ab"
     end
   end
 
   on_linux do
     on_arm do
       url "#{base_url}/pdf.zig-v#{version}-aarch64-linux.tar.gz"
-      sha256 "1e5b65823905ed8886ecdbfbd2794a2b6bcab9cb5758f4f2a43cb82742c48cbb"
+      sha256 "6bbec166703a26d111bf0f95c11064f3ee8eecdfb16127dbca71d487d8b7d419"
     end
     on_intel do
       url "#{base_url}/pdf.zig-v#{version}-x86_64-linux.tar.gz"
-      sha256 "f7e56a4e43724479928666430f1fd8fca98ea1126c117bc97666a963fd4774b4"
+      sha256 "aee88d64afcfd27b313271edb66debf6edd2c89f322d4eb33da059a8448080d1"
     end
   end
 
