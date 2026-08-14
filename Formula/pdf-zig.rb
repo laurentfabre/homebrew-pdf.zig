@@ -13,7 +13,11 @@ class PdfZig < Formula
   version "2.4.0"
   license "CC0-1.0"
 
-  disable! date: "2026-08-14", because: "the upstream repository is no longer public and its release assets cannot be downloaded"
+  # Homebrew renders this as "Disabled because it <reason>!", so the string
+  # has to read as a continuation. The date is in the past on purpose: a
+  # same-day or future date is treated as a pending deprecation, which only
+  # warns, and a warning still lets the doomed download run.
+  disable! date: "2026-08-13", because: "can no longer be downloaded — the upstream repository is no longer public"
 
   base_url = "https://github.com/laurentfabre/pdf.zig/releases/download/v#{version}"
 
