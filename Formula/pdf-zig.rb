@@ -1,20 +1,19 @@
-# Homebrew formula for pdf.zig.
+# Homebrew formula for pdf.zig — RETIRED.
 #
-# This is the canonical source — at GA time it gets copied into the
-# `laurentfabre/homebrew-pdf.zig` tap repo so users can install via:
+# The upstream repository is no longer public, so the release assets the
+# `url` lines below point at are not anonymously fetchable. `disable!`
+# rather than `deprecate!`: an install cannot succeed, so it should fail
+# with the reason instead of a bare 404 from the download step.
 #
-#   brew tap laurentfabre/pdf.zig
-#   brew install pdf.zig
-#
-# The placeholder SHA256s below are replaced by `scripts/update-formula.sh`
-# after a release is cut. That script reads `release/SHA256SUMS` produced
-# by the GH Actions release workflow and rewrites the four `sha256` lines.
+# The `url`/`sha256` lines are kept as-is so the digests stay on record.
 
 class PdfZig < Formula
   desc "PDF -> Markdown extraction CLI, NDJSON-streaming, optimized for LLM consumers"
   homepage "https://github.com/laurentfabre/pdf.zig"
   version "2.4.0"
   license "CC0-1.0"
+
+  disable! date: "2026-08-14", because: "the upstream repository is no longer public and its release assets cannot be downloaded"
 
   base_url = "https://github.com/laurentfabre/pdf.zig/releases/download/v#{version}"
 
